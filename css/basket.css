@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* whoops */
+.whoops {
+  font-family: Montserrat;
+  letter-spacing: 0.03em;
+  margin-top: 3rem;
+  /* color: linear-gradient()), */
+  /* linear-gradient; */
+  /* background: -webkit-linear-gradient(0deg, #FF1493, #FF1493); */
+  background: -webkit-linear-gradient(
+0deg, rgba(255, 110, 127), rgba(255, 110, 127));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Message */
+.mssg{
+    margin-top: 3rem;
+}
+/* button */
+.button a{
+    text-decoration: none;
+    background: #ADFF2F80;
+    border-radius: 5px;
+}
+

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* navbar */
+#top {
+  height: 100vh;
+}
+.container {
+  position: relative;
+}
+.navbar {
+  /* background-color: #60e6d1; */
+  background-color: #433520;
+  /* background-color: black; */
+}
+.nav-link {
+  color: mediumspringgreen;
+}
+.image {
+  height: 60px;
+  width: 60px;
+}
+.fa {
+  color: white;
+  padding: 7px;
+  font-size: 2rem;
+}
+.navbar-nav .nav-link {
+  text-align: center;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.mainTitle {
+  /* background-color: #d1f7a5; */
+  margin-top: 76px;
+}
+.mainTitle-image {
+  width: 30%;
+  transform: rotate(-15deg);
+  position: relative;
+  left: 2.5rem;
+  height: 35%;
+}
+

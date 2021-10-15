@@ -6,13 +6,14 @@
 /* footer */
 #footer {
   /* background-color: #26272b; */
-  background: linear-gradient(
+  /* background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 0.12),
       rgba(255, 255, 255, 0.12)
     ),
     linear-gradient(0deg, rgba(25, 10, 5, 0.32), rgba(25, 10, 5, 0.32)),
-    rgba(135, 0, 0, 0.77);
+    rgba(135, 0, 0, 0.77); */
+  background-color: #44667c;
 }
 .footer {
   justify-content: space-between;
@@ -34,8 +35,12 @@ hr {
 }
 .footer p,
 .footer li {
-  color: mediumspringgreen;
+  /* color: mediumspringgreen; */
+  /* color: white; */
+  color: black;
+  /* color: black; */
   font-size: 16px;
+  /* font-weight: 500px; */
 }
 .contact .fa {
   margin-right: 10px;
@@ -47,7 +52,10 @@ hr {
 }
 a {
   text-decoration: none;
-  color: mediumspringgreen;
+  /* color: mediumspringgreen; */
+  /* color: white; */
+  color: black;
+  /* font-weight: bold; */
 }
 a:hover {
   color: orange;
@@ -80,6 +88,7 @@ ul {
 .register a:hover {
   color: white;
   background-color: orange;
+  text-decoration: none;
 }
 /* social */
 .social {

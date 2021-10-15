@@ -3,9 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* whoops */
 .whoops {
   font-family: Montserrat;
+  font-size: 3rem;
   letter-spacing: 0.03em;
   margin-top: 3rem;
   /* color: linear-gradient()), */
@@ -19,13 +21,38 @@
 
 /* Message */
 .mssg{
-    margin-top: 3rem;
+  letter-spacing: 0.07em;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  /* color: blueviolet; */
+  color: crimson;
+  /* color: cadetblue; */
+  /* color: brown; */
+  /* color: currentColor; */
 }
 
 /* button */
-.button a{
+.btn {
     text-decoration: none;
-    background: #ADFF2F80;
+    background: #3D7EA6;
+    padding: 5px 12rem 5px 12rem;
+    /* width: 16rem; */
+    /* height: 1rem; */
     border-radius: 5px;
+    margin-bottom: 5rem;
+    /* right: 25rem; */
 }
-
+.login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn a{
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+.btn a:hover{
+  text-decoration: none;
+}

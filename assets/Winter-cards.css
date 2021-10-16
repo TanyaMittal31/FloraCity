@@ -1,0 +1,124 @@
+*
+{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+
+#container
+{
+   display: flex;
+   flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+#container2
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+.box
+{
+    width:  400px;
+    margin: 20px; 
+    margin-left: 40px;
+    text-align: justify;
+    padding: 20px; 
+    border:0.2px solid gray;
+    box-shadow: gray;
+    
+}
+
+#box1 
+{
+    
+    margin-left: 40px;
+
+}
+
+#box3
+{
+   
+    margin-right: 40px;
+}
+#box4
+{
+    
+    margin-left: 40px;
+}
+
+#box6
+{
+    
+    margin-right: 40px;
+}
+
+.box img 
+{
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+Icons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  Icons i:hover {
+    color:red;
+  }
+  Icons  i {
+    color: orange;
+    font-size: 40px;
+  }
+
+
+
+.box  h2
+{
+    font-size:x-large;
+}
+.box h4
+{
+    font-style:normal;
+    font-size:medium;
+    color:rgba(0, 0, 0, 0.76);
+    text-align: center;
+}
+.box  h3
+{
+    font-size:large;
+    color: red;
+    text-align: center;
+}
+.mybutton
+{
+    display:block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial;
+    background-color: rgb(12, 16, 24);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.mybutton:hover
+{
+    background-color: red;
+}
+ 
+  @media(max-width:768px)
+  {
+      .container
+      {
+          width:100%;
+      }
+      .container1
+      {
+          width:100%;
+      }
+  }

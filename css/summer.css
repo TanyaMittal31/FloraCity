@@ -306,6 +306,10 @@ a:hover{
   .mySlides {
     display: none;
   }
+  .mySlides img{
+      width: 400px;
+      height: 500px;
+  }
   
   /* Add a pointer when hovering over the thumbnail images */
   .cursor {
@@ -367,9 +371,12 @@ a:hover{
   /* Six columns side by side */
   .column {
     float: left;
-    width: 16.66%;
+    width: 25%;
+    
   }
-  
+  .column img{
+      height: 150px;
+  }
   /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.6;

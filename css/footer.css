@@ -46,11 +46,12 @@ hr {
 }
 .contact .fa {
   margin-right: 10px;
+  color: black;
 }
 .copyright,
 .register {
   text-align: center;
-  color: black;
+  color: white;
 }
 a {
   text-decoration: none;

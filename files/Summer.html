@@ -19,45 +19,81 @@
                 <div class="carasoule">
                     <div class="mySlides">
                         <div class="numbertext">1 / 4</div>
-                          <img src="../assets/daffodil.jpg" style="width:100%">
-                      </div>
-                    
-                      <div class="mySlides">
+                        <img src="../assets/daffodil.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
                         <div class="numbertext">2 / 4</div>
-                          <img src="../assets/decor.png" style="width:100%">
-                      </div>
-                    
-                      <div class="mySlides">
+                        <img src="../assets/decor.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
                         <div class="numbertext">3 / 4</div>
-                          <img src="../assets/pink-lilies-in-white-pot.png" style="width:100%">
-                      </div>
-                    
-                      <div class="mySlides">
+                        <img src="../assets/pink-lilies-in-white-pot.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
                         <div class="numbertext">4 / 4</div>
-                          <img src="../assets/images.jpg" style="width:100%">
-                      </div>
-                    
-                      <!-- Next and previous buttons -->
-                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                      <!-- Thumbnail images -->
-                      <div class="row">
+                        <img src="../assets/images.jpg" style="width:100%">
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <!-- Thumbnail images -->
+                    <div class="row">
                         <div class="column">
-                          <img class="demo cursor" src="../assets/daffodil.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+                            <img class="demo cursor" src="../assets/daffodil.jpg" style="width:100%"
+                                onclick="currentSlide(1)" alt="">
                         </div>
                         <div class="column">
-                          <img class="demo cursor" src="../assets/decor.png" style="width:100%" onclick="currentSlide(2)" alt="">
+                            <img class="demo cursor" src="../assets/decor.png" style="width:100%"
+                                onclick="currentSlide(2)" alt="">
                         </div>
                         <div class="column">
-                          <img class="demo cursor" src="../assets/pink-lilies-in-white-pot.png" style="width:100%" onclick="currentSlide(3)" alt="">
+                            <img class="demo cursor" src="../assets/pink-lilies-in-white-pot.png" style="width:100%"
+                                onclick="currentSlide(3)" alt="">
                         </div>
                         <div class="column">
-                          <img class="demo cursor" src="../assets/images.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+                            <img class="demo cursor" src="../assets/images.jpg" style="width:100%"
+                                onclick="currentSlide(4)" alt="">
                         </div>
-                        
-                      </div>
+
+                    </div>
                 </div>
             </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    var captionText = document.getElementById("caption");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    captionText.innerHTML = dots[slideIndex - 1].alt;
+                }
+            </script>
 
         </div>
         <div class="pp-box-2">
@@ -115,10 +151,10 @@
                     </div>
                 </div>
                 <div class="tird-row">
-                    
-                        <h5>Card-Number</h5>
-                        <div class="selection">
-                            <div class="date">
+
+                    <h5>Card-Number</h5>
+                    <div class="selection">
+                        <div class="date">
                             <select name="months" id="months">
                                 <option value="Jan">Jan</option>
                                 <option value="Feb">Feb</option>
@@ -151,7 +187,7 @@
                 </div>
                 <a href="">Confirm</a>
             </div>
-        </div>    
+        </div>
     </div>
     <section id="testimonials">
         <div class="testimonial-heading">

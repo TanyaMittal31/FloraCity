@@ -1,19 +1,13 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 /* footer */
 #footer {
-  /* background-color: #26272b; */
-  /* background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.12),
-      rgba(255, 255, 255, 0.12)
-    ),
-    linear-gradient(0deg, rgba(25, 10, 5, 0.32), rgba(25, 10, 5, 0.32)),
-    rgba(135, 0, 0, 0.77); */
   background-color: #44667c;
+  margin-bottom: 0;
+  margin-top: 3rem;
 }
 .footer {
   justify-content: space-between;

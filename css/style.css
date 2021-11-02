@@ -12,12 +12,12 @@
   align-items: center;
 }
 .top1 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
   text-align: center;
 }
 .top1 p span.typed-text {
-  font-weight: normal;
+  font-weight: 600;
   color: #dd7732;
 }
 .top1 p span.TypeCursor {
@@ -85,6 +85,59 @@
   height: 35%;
 }
 
+.floratext{
+  height: 50px;
+}
+
+
+/* plants-categories */
+.plants-categories{
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 2rem;
+  /* margin-top: 7rem; */
+}
+.categories-head{
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  
+}
+.category-card img{
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+
+}
+.category-card{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.category-card .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+.category-card:hover .overlay{
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+.title{
+  position: absolute;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  z-index: 1;
+  transition: top .5s ease;
+}
 
 /* Developers */
 .developers{
@@ -92,13 +145,13 @@
   height: 75vh;
 }
 
-.head h3{
+.developers .head h3{
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
-.card
+.developers .card
 {
   height: 100%;
   width: 100%;
@@ -110,31 +163,32 @@
   align-items: center;
 }
 
-.card:hover{
+.developers .card:hover{
   transform: scale(1.1);
 }
-.card img{
+.developers .card img{
   height: 200px;
   width: 200px;
   
 }
 
-.card-title{
+.developers .card-title{
   font-weight: bold;
   background: -webkit-linear-gradient(to right, #333333, #dd1818); 
   background: linear-gradient(to right, #333333, #dd1818);
 -webkit-background-clip: text;
   -webkit-text-fill-color:transparent;
+  text-align: center;
 }
 
-.card-text{
+.developers .card-text{
   font-weight: 600;
 }
-.card .fa{
+.developers .card .fa{
   color: brown;
   font-size: 2rem;
 }
 
-.card .fa:hover{
+.developers   .card .fa:hover{
   color: burlywood;
 }

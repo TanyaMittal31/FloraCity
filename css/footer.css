@@ -13,11 +13,12 @@
     ),
     linear-gradient(0deg, rgba(25, 10, 5, 0.32), rgba(25, 10, 5, 0.32)),
     rgba(135, 0, 0, 0.77); */
-  background-color: #44667c;
+  background-color: #4E9F3D;
 }
 .footer {
   justify-content: space-between;
   padding-top: 12px;
+  
   /* height: 80vh; */
 }
 hr {
@@ -27,6 +28,7 @@ hr {
 
 .about {
   text-align: justify;
+  
 }
 .footer h4 {
   color: white;
@@ -48,7 +50,7 @@ hr {
 .copyright,
 .register {
   text-align: center;
-  color: white;
+  color: black;
 }
 a {
   text-decoration: none;
@@ -143,9 +145,10 @@ ul {
 /*  */
 .copyright {
   padding: 8px;
-  color: white;
+  color: black;
   text-align: center;
-  background-color: black;
+  background-color: #D8E9A8;
+  /* background-color: #000; */
   /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), rgba(17, 17, 17, 0.8); */
   height: 5rem;
   display: flex;

@@ -82,16 +82,14 @@ Icons {
   }
  
 
-
-
-  @media(max-width:768px)
+@media screen and (max-width:486px)
+{
+  .box
   {
-      .container
-      {
-          width:100%;
-      }
-      .container1
-      {
-          width:100%;
-      }
+  width: 100%;
   }
+}
+
+  
+ 
+ 

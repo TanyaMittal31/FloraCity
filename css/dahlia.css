@@ -4,12 +4,15 @@
   box-sizing: border-box;
 }
 
-#top{
-    margin-bottom: 1.5rem;
+#top {
+  margin-bottom: 1.5rem;
 }
 
 body {
   background-color: #fdfaee;
+}
+
+#main-content , #testimonials , #comment{
   font-family: mft-font;
   color: #333;
 }
@@ -26,7 +29,7 @@ body {
 }
 
 .carousel-indicators img {
-  height:  4rem;
+  height: 4rem;
   width: 5rem;
 }
 
@@ -42,8 +45,8 @@ body {
 }
 
 #carousel-thumb .list-inline {
-  white-space:nowrap;
-  overflow-x:auto;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 #carousel-thumb .carousel-indicators {
@@ -62,7 +65,12 @@ body {
 #carousel-thumb .carousel-indicators > li.active img {
   opacity: 0.7;
 }
-
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
 
 /* 2nd block */
 .phead {
@@ -101,7 +109,7 @@ body {
 .pprice {
   font-weight: 700;
 }
-button{
+button {
   background-color: aqua;
   /* width: 10rem; */
   padding: 2px 85px;
@@ -114,7 +122,7 @@ button{
 button a {
   text-decoration: none;
 }
-button:hover{
+button:hover {
   background-color: dodgerblue;
 }
 .payment h2 {
@@ -130,153 +138,157 @@ button:hover{
   align-items: center;
 }
 
-.cvv{
+.cvv {
   margin-left: 20px;
 }
-.cvv input{
+.cvv input {
   width: 5rem;
 }
-.card-num{
+.card-num {
   margin-top: 10px;
 }
-.card-num input{
+.card-num input {
   width: 70%;
   margin-bottom: 20px;
 }
 /* customer reviews */
 
-#testimonials{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+#testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
-.testimonial-heading{
-    letter-spacing: 1px;
-    margin: 20px 0px;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.testimonial-heading {
+  letter-spacing: 1px;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.testimonial-heading h1{
-    font-size: 2.2rem;
-    font-weight: 700;
-    font-family: 'Work Sans', sans-serif;
-    color: #202020;
-    padding: 10px 20px;
+.testimonial-heading h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  font-family: "Work Sans", sans-serif;
+  color: #202020;
+  padding: 10px 20px;
 }
-.testimonial-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-
+.testimonial-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.testimonial-box1{
-    width: 500px;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 20px;
-    margin: 15px;
-    cursor: pointer;
+.testimonial-box1 {
+  width: 100%;
+  box-shadow: 2px 2px 30px rgb(0 0 0 / 10%);
+  background-color: #fff;
+  padding: 20px;
+  margin: 7px 5px;
+  cursor: pointer;
 }
-.profile-image{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow : hidden;
-    margin-right: 10px;
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
 }
-.profile-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: centers;
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: centers;
 }
-.profile{
-    display: flex;
-    align-items: center;
+.profile {
+  display: flex;
+  align-items: center;
 }
-.name-user{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Lato', sans-serif;
+.name-user {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato", sans-serif;
 }
-.name-user strong{
-    color: #3d3d3d;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
+.name-user strong {
+  color: #3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
-.name-user span{
-    columns: #979797;
-    font-size: 0.8rem;
-
+.name-user span {
+  columns: #979797;
+  font-size: 0.8rem;
 }
-.reviews{
-    color: #f9d71c;
+.reviews .fa{
+  color: #f9d71c;
+  font-size: 1rem;
+  padding: 0.5px;
 }
-.box-top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.client-comment{
-    font-size: 0.9rem;
-    color: #4b4b4b;
-    font-family: 'Work Sans', sans-serif;
+.client-comment {
+  font-size: 0.9rem;
+  color: #4b4b4b;
+  font-family: "Work Sans", sans-serif;
 }
-.testimonial-box1:hover{
-    transform: translateY(-10px);
-    transition: all ease 0.3ms;
+.testimonial-box1:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.3ms;
+}
+.client-comment p{
+  text-align: justify;
 }
 
 /* comment */
 
-.comment-section{
-    width: 600px;
-    padding: 15px 10px;
-    margin-top: 1.5rem;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
+.comment-section {
+  width: 100%;
+  padding: 15px 10px;
+  margin-top: 1.5rem;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
 }
-.comment-section h2{
-    text-align: center;
-    margin-bottom: 15px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 700;
+.comment-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
 }
-textarea{
-    height: 20px;
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #aaa;
-    background-color: transparent;
-    margin-bottom: 10px;
-    resize: none;
-    outline: none;
+textarea {
+  height: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background-color: transparent;
+  margin-bottom: 10px;
+  resize: none;
+  outline: none;
 }
 
-input[type="submit"], input[type="reset"]{
-    padding: 10px 15px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
+input[type="submit"],
+input[type="reset"] {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
 }
-input[type="submit"]{
-    color: #fff;
-    background-color: #273c75;
+input[type="submit"] {
+  color: #fff;
+  background-color: #273c75;
 }
-input[type="reset"]{
-    color: #333;
-    background-color: transparent;
+input[type="reset"] {
+  color: #333;
+  background-color: transparent;
 }

@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: #fdfaee;
 }
 
@@ -14,10 +14,9 @@ body{
   margin-top: 0.2rem;
 }
 .one,
-.two
-{
+.two {
   /* opacity: 0.7; */
-  border: 2px solid red;
+  /* border: 2px solid red; */
   height: 90vh;
   /* background-position: center; */
   background-repeat: no-repeat;
@@ -25,34 +24,75 @@ body{
   background-attachment: fixed;
 }
 .one {
-  background-image: url(../assets/wintercar.png);
+  background-image: url(../assets/winterKar.png);
 }
 .two {
   background-image: url(../assets/summercar.png);
 }
-
+.one .caption1 {
+  color: black;
+}
+.two .caption1 {
+  color: white;
+}
+.one .caption1,
+.two .caption1 {
+  justify-content: left;
+  text-align: left;
+  bottom: 10rem;
+  left: 3rem;
+}
+.caption1 h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+.caption1 p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.caption1 a{
+  text-decoration: none;
+  text-align: center;
+}
+.btn-shop {
+  padding: 7px 80px;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.btn-shop:hover{
+  background-color: #4E9F3D;
+  color: white;
+}
 /* plants-categories */
 .plants-categories {
   width: 100%;
-  height: 70vh;
-  margin-bottom: 2rem;
-  /* margin-top: 7rem; */
+  height: 60vh;
+  margin-top: 2rem;
 }
-.categories-head {
+.categories-head h4 {
   font-weight: 700;
   margin-bottom: 1.5rem;
+  text-transform: capitalize;
+  left: 1rem;
 }
 .category-card img {
-  position: absolute;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
 }
 .category-card {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 .category-card .overlay {
   position: absolute;
@@ -73,20 +113,58 @@ body{
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: rgb(216, 126, 126);
   z-index: 1;
-  transition: top 0.5s ease;
+  transition: top 2s ease;
+  transition-timing-function: top 2s;
 }
-
+.category-card:hover .title{
+  top: 4rem;
+}
+.btn-view{
+  /* position: absolute; */
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: none;
+  transition: top 2s ease;
+  transition-timing-function: top 2s;
+}
+.btn-view .fa{
+  font-size: 18px;
+}
+.btn-view a{
+  z-index: 1;
+  position: absolute;
+  padding: 2px 25px;
+  background-color: #353834;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.category-card:hover .btn-view{
+  display: block;
+}
+.category-card:hover .btn-view a{
+  top: 8rem;
+  right: 8rem;
+}
+.btn-view a:hover{
+  text-decoration: none;
+  background-color: #4E9F3D;
+}
 /* Developers */
 .developers {
   width: 100%;
   height: 75vh;
+  margin-top: 2rem;
 }
 
-.developers .head h3 {
-  font-size: 25px;
-  font-weight: bold;
+.developers .head h1 {
+  /* font-size: 25px; */
+  font-weight: 700;
   margin-bottom: 1.5rem;
 }
 

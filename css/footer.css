@@ -5,6 +5,9 @@
 }
 /* footer */
 #footer {
+
+/* <<<<<< HEAD */
+
   /* background-color: #26272b; */
   /* background: linear-gradient(
       0deg,
@@ -14,10 +17,18 @@
     linear-gradient(0deg, rgba(25, 10, 5, 0.32), rgba(25, 10, 5, 0.32)),
     rgba(135, 0, 0, 0.77); */
   background-color: #4E9F3D;
-  /* background-color: rgb(47, 255, 127); */
+}
+  /* .HEAD{
+
+  background-color: rgb(47, 255, 127);
   margin-bottom: 0;
   margin-top: 3rem;
-}
+
+  /* background-color: rgb(47, 255, 127); */
+  /* margin-bottom: 0; */
+  /* margin-top: 3rem; */
+
+/* } */ 
 .footer {
   justify-content: space-between;
   padding-top: 12px;

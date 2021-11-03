@@ -3,33 +3,58 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: #fdfaee;
+}
+
+/* carousel */
+.karosel {
+  height: 90vh;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+.one,
+.two
+{
+  /* opacity: 0.7; */
+  border: 2px solid red;
+  height: 90vh;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.one {
+  background-image: url(../assets/wintercar.png);
+}
+.two {
+  background-image: url(../assets/summercar.png);
+}
 
 /* plants-categories */
-.plants-categories{
+.plants-categories {
   width: 100%;
   height: 70vh;
   margin-bottom: 2rem;
   /* margin-top: 7rem; */
 }
-.categories-head{
+.categories-head {
   font-weight: 700;
   margin-bottom: 1.5rem;
-  
 }
-.category-card img{
+.category-card img {
   position: absolute;
   width: 100%;
   height: 60vh;
-
 }
-.category-card{
+.category-card {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
 }
-.category-card .overlay{
+.category-card .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,11 +63,11 @@
   background: rgba(0, 0, 0, 0);
   transition: background 0.5s ease;
 }
-.category-card:hover .overlay{
+.category-card:hover .overlay {
   display: block;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.3);
 }
-.title{
+.title {
   position: absolute;
   font-weight: 700;
   font-size: 30px;
@@ -50,23 +75,22 @@
   text-transform: uppercase;
   color: white;
   z-index: 1;
-  transition: top .5s ease;
+  transition: top 0.5s ease;
 }
 
 /* Developers */
-.developers{
+.developers {
   width: 100%;
   height: 75vh;
 }
 
-.developers .head h3{
+.developers .head h3 {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
-.developers .card
-{
+.developers .card {
   height: 100%;
   width: 100%;
   border: 1px solid;
@@ -77,32 +101,31 @@
   align-items: center;
 }
 
-.developers .card:hover{
+.developers .card:hover {
   transform: scale(1.1);
 }
-.developers .card img{
+.developers .card img {
   height: 200px;
   width: 200px;
-  
 }
 
-.developers .card-title{
+.developers .card-title {
   font-weight: bold;
-  background: -webkit-linear-gradient(to right, #333333, #dd1818); 
+  background: -webkit-linear-gradient(to right, #333333, #dd1818);
   background: linear-gradient(to right, #333333, #dd1818);
--webkit-background-clip: text;
-  -webkit-text-fill-color:transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
 }
 
-.developers .card-text{
+.developers .card-text {
   font-weight: 600;
 }
-.developers .card .fa{
+.developers .card .fa {
   color: brown;
   font-size: 2rem;
 }
 
-.developers   .card .fa:hover{
+.developers .card .fa:hover {
   color: burlywood;
 }

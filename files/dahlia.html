@@ -29,7 +29,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-expand-xl sticky-top">
             <!-- <img src="./assets/logo.png" alt="" class="navbar-brand image" /> -->
-            <img src="../assets/logo floraacity.png" alt="Floracity" class="floratext">
+            <a href="../index.html"><img src="../assets/logo floraacity.png" alt="Floracity" class="floratext"></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <!-- <span class="navbar-toggler-icon"></span> -->
@@ -86,18 +86,26 @@
                         </a>
                         <!--/.Controls-->
                         <ol class="carousel-indicators">
-                            <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+                            <li class="list-inline-item">
+                            <a data-target=" data-slide-to=" class="active image1">
                                 <img src="../assets/dahlia0.png" width="100">
-                            </li>
-                            <li data-target="#carousel-thumb" data-slide-to="1">
-                                <img src="h../assets/dahlia1.png" width="100">
-                            </li>
-                            <li data-target="#carousel-thumb" data-slide-to="2">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a data-target="#carousel-thumb" data-slide-to="1">
+                                <img src="../assets/dahlia1.png" width="100">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a data-target="#carousel-thumb" data-slide-to="2">
                                 <img src="../assets/dahlia2.png" width="100">
-                            </li>
-                            <li data-target="#carousel-thumb" data-slide-to="3">
+                            </a>
+                        </li>
+                            <li class="list-inline-item">
+                            <a data-target="#carousel-thumb" data-slide-to="3">
                                 <img src="../assets/dahlia3.png" width="100">
-                            </li>
+                            </a>
+                        </li>
                         </ol>
                     </div>
                     <!--/.Carousel Wrapper-->
@@ -128,6 +136,10 @@
                 <div class="col-md-4 col-sm-12 col-lg-4 payment">
                     <h1 class="pprice">Rs. 600</h1>
                     <p class="pid">With Deliery Charges Rs. 50 & Inclusive all Taxes </p>
+                    <form action="">
+                        <label for="qty">Qty</label>
+                        <input type="number" min="0" max="10"/>
+                    </form>
                     <h2>Confirm Your Flowers</h2>
                     <form action="">
                         <div class="labels">
@@ -137,21 +149,21 @@
                                     <input type="text" name="Owner" id="Owner" required />
                                 </div>
                             </div>
-                            <div>
+                            <div class="cvv">
                                 <label for="CVV">CVV</label>
                                 <div>
                                     <input type="number" name="CVV" id="CVV" required />
                                 </div>
                             </div>
                         </div>
-                            <div>
+                            <div class="card-num">
                                 <label for="Card-Number">Card-Number</label>
                                 <div>
                                     <input type="number" name="Card-Number" id="Card-Number" required />
                                 </div>
                             </div>
                         
-                        <a href="#">Confirm</a>
+                        <button type="submit"><a href="#">Confirm</a></button>
                     </form>
                     <div class="pay-options">
                         <img src="../assets/paypal.jpg" alt="">
@@ -378,7 +390,7 @@
     </section>
 
     <!-- required js file -->
-    <script src="./js/automatic.js"></script>
+    <script src="../js/automatic.js"></script>
     <!-- Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

@@ -9,7 +9,7 @@ body{
    line-height: 1.42857143;
    color: #333; 
 }
- .container{
+.product-info{
     width: 100%;
     display: flex; 
     margin-top: 10px;
@@ -285,7 +285,7 @@ button{
 
 }
 a{
-    background-color: blueviolet;
+    
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -298,7 +298,7 @@ a{
 a:hover{
     background-color: dodgerblue;
 }
-.carasoule {
+.carasoule-image {
     position: relative;
   }
   
@@ -386,75 +386,4 @@ a:hover{
   .demo:hover {
     opacity: 1;
   }
-
-  #footer {
-    /* <<<<<< HEAD */
-      /* background-color: #26272b; */
-      /* background: linear-gradient(
-          0deg,
-          rgba(255, 255, 255, 0.12),
-          rgba(255, 255, 255, 0.12)
-        ),
-        linear-gradient(0deg, rgba(25, 10, 5, 0.32), rgba(25, 10, 5, 0.32)),
-        rgba(135, 0, 0, 0.77); */
-      background-color: #4E9F3D;
-    
-      background-color: rgb(47, 255, 127);
-      margin-bottom: 0;
-      margin-top: 3rem;
-    
-    }
-    .footer {
-      justify-content: space-between;
-      padding-top: 12px;
-      
-      /* height: 80vh; */
-    }
-    hr {
-      opacity: 0.2;
-      background-color: white;
-    }
-    
-    .about {
-      text-align: justify;
-      
-    }
-    .footer h4 {
-      color: white;
-      text-transform: uppercase;
-      font-size: 20px;
-    }
-    .footer p,
-    .footer li {
-      /* color: mediumspringgreen; */
-      /* color: white; */
-      color: black;
-      /* color: black; */
-      font-size: 16px;
-      /* font-weight: 500px; */
-    }
-    .contact .fa {
-      margin-right: 10px;
-      color: black;
-    }
-    .copyright,
-    .register {
-      text-align: center;
-      color: white;
-    }
-    a {
-      text-decoration: none;
-      /* color: mediumspringgreen; */
-      /* color: white; */
-      color: black;
-      /* font-weight: bold; */
-    }
-    a:hover {
-      color: orange;
-    }
-    .social a {
-      color: white;
-    }
-    ul {
-      list-style: none;
-    }
+ 

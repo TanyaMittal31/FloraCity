@@ -3,91 +3,331 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: #fdfaee;
 }
 
 /* carousel */
 .karosel {
-  height: 90vh;
+  height: 32rem;
   width: 100%;
   margin-top: 0.2rem;
 }
 .one,
-.two
-{
+.two {
   /* opacity: 0.7; */
-  border: 2px solid red;
-  height: 90vh;
+  /* border: 2px solid red; */
+  height: 32rem;
   /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 .one {
-  background-image: url(../assets/wintercar.png);
+  background-image: url(../assets/winterKar.png);
 }
 .two {
   background-image: url(../assets/summercar.png);
+}
+.one .caption1 {
+  color: black;
+}
+.two .caption1 {
+  color: white;
+}
+.one .caption1,
+.two .caption1 {
+  justify-content: left;
+  text-align: left;
+  bottom: 10rem;
+  left: 3rem;
+}
+.caption1 h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  text-transform: capitalize;
+}
+.caption1 p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.caption1 a {
+  text-decoration: none;
+  text-align: center;
+}
+.btn-shop {
+  padding: 0.4rem 4.5rem;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.btn-shop:hover {
+  background-color: #4e9f3d;
+  color: white;
 }
 
 /* plants-categories */
 .plants-categories {
   width: 100%;
-  height: 70vh;
+  height: 19rem;
+  margin-top: 1.7rem;
   margin-bottom: 2rem;
-  /* margin-top: 7rem; */
 }
-.categories-head {
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+.cards {
+  display: flex;
+}
+.categories-head h2 {
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  text-transform: capitalize;
+  /* left: 1rem; */
 }
 .category-card img {
-  position: absolute;
-  width: 100%;
-  height: 60vh;
+  width: 19.3rem;
+  height: 16rem;
 }
 .category-card {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-}
-.category-card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
+  /* margin-top: 2rem; */
   transition: background 0.5s ease;
 }
-.category-card:hover .overlay {
-  display: block;
-  background: rgba(0, 0, 0, 0.3);
+.category-card:hover {
+  /* background-color: rgba(0, 0, 0, 0); */
+  opacity: 0.4;
 }
+.category-card:hover .title {
+  /* color: rgb(252, 13, 13); */
+  color: blue;
+  opacity: 1;
+}
+
 .title {
   position: absolute;
   font-weight: 700;
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: rgb(216, 126, 126);
   z-index: 1;
-  transition: top 0.5s ease;
+  transition: top 2s ease;
+  transition-timing-function: top 2s;
+}
+.category-card:hover .title {
+  top: 5rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .category-card {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .category-card {
+    margin: 0.5rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .title {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .category-card {
+    margin: 0.5rem;
+  }
+}
+
+/* top picks */
+.pickHead {
+  font-weight: 600;
+  margin-bottom: -1.2rem;
+  text-transform: capitalize;
+}
+.tp-cards {
+  height: 35rem;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 31.25rem 6.25rem;
+  grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+main#tp-carousel {
+  grid-row: 1 / 2;
+  grid-column: 1 / 8;
+  width: 100%;
+  height: 31.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  perspective: 37.5rem;
+  --items: 5;
+  --middle: 3;
+  --position: 1;
+  pointer-events: none;
+}
+
+div.pick-item {
+  position: absolute;
+  width: 18.75rem;
+  height: 25rem;
+  /* background-image: url(../assets/calendula-pick.png); */
+  --r: calc(var(--position) - var(--offset));
+  --abs: max(calc(var(--r) * -1), var(--r));
+  transition: all 0.25s linear;
+  transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-300px * var(--r)));
+  z-index: calc((var(--position) - var(--abs)));
+}
+.pick-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+.content-pick a {
+}
+div.pick-item:nth-of-type(1) {
+  --offset: 1;
+  background-image: url(../assets/carnation0.png);
+}
+div.pick-item:nth-of-type(2) {
+  --offset: 2;
+  background-image: url(../assets/daffodil-pick.png);
+}
+div.pick-item:nth-of-type(3) {
+  --offset: 3;
+  background-image: url(../assets/Helianthus-bouquet.png);
+}
+div.pick-item:nth-of-type(4) {
+  --offset: 4;
+  background-image: url(../assets/Tulip-bouquet.png);
+}
+div.pick-item:nth-of-type(5) {
+  --offset: 5;
+  background-image: url(../assets/calndula1.png);
+}
+
+input:nth-of-type(1) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(1):checked ~ main#tp-carousel {
+  --position: 1;
+}
+
+input:nth-of-type(2) {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(2):checked ~ main#tp-carousel {
+  --position: 2;
+}
+
+input:nth-of-type(3) {
+  grid-column: 4 /5;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(3):checked ~ main#tp-carousel {
+  --position: 3;
+}
+
+input:nth-of-type(4) {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(4):checked ~ main#tp-carousel {
+  --position: 4;
+}
+
+input:nth-of-type(5) {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+input:nth-of-type(5):checked ~ main#tp-carousel {
+  --position: 5;
+}
+
+@media screen and (min-width: 320px) and (max-width: 346px) {
+  .top-picks {
+    margin-top: 52rem;
+    /* margin-bottom: 70rem; */
+  }
+}
+@media screen and (min-width: 347px) and (max-width: 369px) {
+  .top-picks {
+    margin-top: 52rem;
+    /* margin-bottom: 66rem; */
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 480px) {
+  .top-picks {
+    margin-top: 52.5rem;
+    /* margin-bottom: 64.5rem; */
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .top-picks {
+    margin-top: 52.5rem;
+    /* margin-bottom: 65rem; */
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .top-picks {
+    margin-top: 20.4rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .top-picks {
+    margin-top: 1.5rem;
+    /* margin-bottom: 16.5rem; */
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .top-picks {
+    margin-top: 1.5rem;
+    /* margin-bottom: 16.5rem; */
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  .top-picks {
+    margin-top: 2.5rem;
+    /* margin-bottom: 14.7rem; */
+  }
 }
 
 /* Developers */
 .developers {
   width: 100%;
-  height: 75vh;
+  /* height: 35rem; */
+  height: 17rem;
+  margin-top: 2.5rem;
 }
 
-.developers .head h3 {
-  font-size: 25px;
-  font-weight: bold;
+.developers .head h2 {
+  /* font-size: 25px; */
+  font-weight: 600;
   margin-bottom: 1.5rem;
+  text-transform: capitalize;
 }
 
 .developers .card {
@@ -128,4 +368,72 @@ body{
 
 .developers .card .fa:hover {
   color: burlywood;
+}
+
+@media screen and (min-width: 320px) and (max-width: 346px) {
+  .developers {
+    margin-top: 1.5rem;
+    margin-bottom: 70rem;
+  }
+}
+@media screen and (min-width: 347px) and (max-width: 369px) {
+  .developers {
+    margin-top: 1.5rem;
+    margin-bottom: 66rem;
+  }
+}
+@media screen and (min-width: 370px) and (max-width: 480px) {
+  .developers {
+    margin-top: 1.5rem;
+    margin-bottom: 64.5rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .developers {
+    margin-top: 1.5rem;
+    margin-bottom: 65rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .developers {
+    margin-top: 1.4rem;
+    margin-bottom: 16.3rem;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .developers {
+    margin-top: 1.5rem;
+    margin-bottom: 16.5rem;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .developers {
+    margin-top: 1.5rem;
+    margin-bottom: 16.5rem;
+  }
+}
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  .developers {
+    margin-top: 2.5rem;
+    margin-bottom: 14.7rem;
+  }
+}
+
+.arrow-up {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  background-color: #4e9f3d;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.arrow-up .fa {
+  color: #fdfaee;
+  font-size: 2.5rem;
 }

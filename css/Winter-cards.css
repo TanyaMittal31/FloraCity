@@ -7,6 +7,20 @@ body
 {
     font-family: arial;
 }
+.text
+{
+  font-size:xx-large;
+  color: green;
+  text-align: center;
+  text-shadow: 2px 2px brown;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.text:hover
+{
+  opacity: 0.3;
+}
 .header
 {
 margin: 2%;

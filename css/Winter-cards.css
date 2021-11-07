@@ -6,7 +6,10 @@
 body
 {
     font-family: arial;
+background-color: #D8E9A8;
+    
 }
+
 .text
 {
   font-size:xx-large;
@@ -36,7 +39,7 @@ display: inline-block;
 box-shadow: 2px 2px 20px black;
 border-radius: 5px; 
 margin: 2%;
-
+background-color: white;
 }
 .box:hover
 {

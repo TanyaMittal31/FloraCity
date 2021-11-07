@@ -61,8 +61,10 @@ text-align: center;
 padding: 5px;
 color: red;
 }
-h1{
+h2{
 font-size: 20px;
+color: #6B6E70;
+font-family: 'Architects Daughter', cursive;
 }
    
    .des{

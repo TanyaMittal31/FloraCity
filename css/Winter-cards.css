@@ -5,11 +5,13 @@
    }
 body
 {
-    font-family: arial;
-background-color: #ECE7B4;
-    
-}
+font-family: arial;
 
+}
+.container
+{
+  background-color: #FFFEB7;
+}
 .text
 {
   font-size:xx-large;

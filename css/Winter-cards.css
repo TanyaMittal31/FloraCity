@@ -8,7 +8,7 @@ body
 font-family: arial;
 
 }
-.container
+.containerOne
 {
   background-color: #BCCC9A;
 }
@@ -98,17 +98,17 @@ h4
 
 
 
-Icons {
-    display: flex;
+.fa-star {
+    /* display: flex; */
     justify-content: center;
     padding-bottom: 0px;
   }
-  Icons i:hover {
+  .fa-star:hover {
     color:red;
   }
-  Icons  i {
+  .fa-star {
     color: orange;
-    font-size: 40px;
+    font-size: 15px;
   }
   h4
   {

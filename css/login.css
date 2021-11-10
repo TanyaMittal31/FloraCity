@@ -9,17 +9,69 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#7d2ae8;
+    background-color: #D8E9A8;
     padding: 30px;
 }
 .container{
+    position: relative;
     max-width: 850px;
     width: 100%;
     background:#fff;
     padding: 40px 30px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    perspective: 2800;
 
 }
+.container .cover{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+.container #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+}
+.container .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: #B1E693; */
+    opacity: 0.5;
+    z-index: 100;
+}
+.container .cover img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 12;
+    backface-visibility : hidden;
+}
+
+.container .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: #7d2ae8; */
+    opacity: 0.5;
+    z-index: 100;
+    transform: rotateY(180deg);
+}
+
+
+.container .cover .back .backImg{
+    transform: rotateY(180deg);
+}
+
+
+
 .container .form-content{
     display: flex;
     align-items: center;
@@ -31,7 +83,7 @@ body{
     background: #fff;
 }
 .form-content .login-form,
-.form-content .signup-form{
+.form-content .Signup-form{
     width: calc(100% / 2 - 25px);
     /* background: red; */
 }
@@ -44,7 +96,7 @@ form .form-content .title{
 form .signup-form .form-content .title:before{
     width: 20px;
 }
-form .form-content .title:before{
+form .form-content .title::before{
     content: '';
     position: absolute;
     left: 0;
@@ -120,4 +172,29 @@ form .form-content label{
 form .form-content label:hover{
     text-decoration: underline;
     
+}
+
+.container #flip{
+    display: none;
+
+ } 
+@media (max-width : 672px) {
+    .container .cover{
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .Signup-form{
+        width: 100%;
+    }
+    .form-content .Signup-form
+    {
+        display: none;
+    }
+    .container #flip:checked form .Signup-form{
+        display: block;
+
+    }
+    .container #flip:checked form .login-form{
+        display: none;
+    }
 }
